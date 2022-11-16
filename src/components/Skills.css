@@ -1,0 +1,167 @@
+.skills .container .content{
+	width: 100%;
+}
+	
+.skills-description{
+	max-width: 700px;
+	margin-bottom: 50px;
+}	
+
+.skills-description h4{
+	font-size: var(--medium);
+	margin-bottom: 30px;
+}
+
+.skills-info{
+	max-width: 100%;
+	display: grid;
+	grid-template-columns: 1fr 1fr;
+	gap: 30px;
+	margin: 0 auto;
+}
+
+.skills-info h4{
+	margin-bottom: 20px;
+}
+
+.skills-info h4 label{
+	background: var(--white-95) ;
+	color: var(--black);
+	font-size: var(--small) ;
+	font-weight: 600;
+	padding: 5px 15px;
+	border-radius: 5px;
+}
+
+.education-all{
+	margin-bottom: 80px;
+	margin-top: 30px;
+}	
+
+.edu-list .item{
+	background: var(--black);
+	box-shadow: var(--box-shadow) ;
+	border-bottom: 3px solid var(--white) ;
+	padding: 20px;
+	margin-top: 30px;
+	border-radius: 5px;
+	transition: .3s ease;
+}
+
+.edu-list .item .year{
+	font-size: var(--small) ;
+	margin-bottom: 5px;
+}	
+	
+.edu-list .item p{
+	color: var(--white) ;
+	font-size: var(--small) ;
+}	
+	
+.edu-list .item p span{
+	font-size:  var(--small);
+	font-weight: 600;
+}	
+
+.skills-list {
+	flex-wrap: wrap;
+	gap: 7%;
+	margin-top: 30px;
+}
+
+.skills-list .skill {
+	text-align: center;
+	margin-bottom: 20px;
+	max-width: 45%;
+	min-width: 25%;
+	box-shadow: var(--box-shadow);
+	border-radius: 5px;
+	transition: .3s ease;
+	margin-top: 20px;
+
+}
+
+.skills-list .skill h4 {
+	margin-bottom: 10px;
+}
+
+.skill .icon {
+	font-size: var(--medium);
+	color: var(--white);
+}
+
+.experiences {
+	margin-top: 120px;
+	max-width: 100%;
+}
+
+.experiences-set {
+	display: flex;
+	flex-wrap: wrap;
+	gap: 3%;
+	justify-content: center;
+	margin-top: 40px;
+}
+
+.experience-card{
+	width: 31%;
+	background: var(--black) ;
+	border-bottom: 3px solid var(--white);
+	padding: 35px;
+	border-radius: 6px;
+	box-shadow: var(--box-shadow) ;
+	transition: .3s ease;
+}
+
+.experience-card .upper{
+	line-height: 30px;
+}
+	
+.experience-card h3{
+	font-size: var(--normal);
+	font-weight: 900;
+}
+
+.experience-card h5{
+	font-size: var(--normal);
+	font-weight: 600;
+}
+
+.experience-card span{
+	font-weight: 900;
+}
+
+.experience-card .hr{
+	width: 100%;
+	height: 2px;
+	background: var(--white-50) ;
+	margin: 10px 0 22px;
+}
+
+.experience-card h4{
+	font-size: var(--small);
+}
+
+.edu-list .item:hover, .skills-list .skill:hover, .experience-card:hover {
+	transform: scale(1.05);
+}
+
+@media screen and (max-width: 760px) {
+	.skills-info {
+		display: flex;
+		flex-wrap: wrap;
+	}
+
+	.experiences-set{
+		display: flex;
+		flex-wrap: wrap;
+	}
+
+	.experience-card{
+		width: auto;
+	}
+
+	.education{
+		width: 100%;
+	}
+}

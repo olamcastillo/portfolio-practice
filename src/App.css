@@ -1,38 +1,198 @@
+@import url('https://fonts.googleapis.com/css2?family=Lexend+Mega:wght@100;400;700&family=Raleway:ital,wght@0,200;0,400;0,600;0,850;1,200;1,400;1,600;1,900&display=swap');
+
+
+/* variables */
+:root {
+	--white: #fff;	
+	--white-07: rgba(250, 250, 250, 0.05);
+	--white-10: rgba(250, 250, 250, 0.10);
+	--white-20: rgba(250, 250, 250, 0.20);
+	--white-25: rgba(250, 250, 250, 0.25);
+	--white-50: rgba(250, 250, 250, 0.50);
+	--white-75: rgba(250, 250, 250, 0.75);
+	--white-90: rgba(250, 250, 250, 0.90);
+	--white-95: rgba(250, 250, 250, 0.95);
+	--black: #000;
+	--black-10: rgba(0, 0, 0, 0.10);
+	--black-25: rgba(0, 0, 0, 0.25);
+	--black-50: rgba(0, 0, 0, 0.50);
+	--black-75: rgba(0, 0, 0, 0.75);
+	--color-filter: invert(1);
+	--box-shadow: 0 0 20px rgb( 0 0 0 / 10% );
+	--small: 1.2em;
+	--normal: 1.5em;
+	--medium: 3em;
+	--large: 5em;
+	--extra-large: 7em;
+	--scroll-bar-color: #000;
+	--scroll-thumb-color: #fff;
+	--scroll-thumb-hover-color: #ddd;
+}
+
+
+* {
+	box-sizing: border-box;
+	padding: 0;
+	margin: 0;
+	outline: none;
+	font-family: 'Lexend Mega', sans-serif;
+	font-family: 'Raleway', sans-serif;
+	scroll-behavior: smooth;
+}
+
+::after, ::before{
+	box-sizing: border-box;
+}
+
 .App {
-  text-align: center;
+	color: var(--white);
+	background-color: var(--black);
+	height: 100%;
+	padding: 2rem 0 0 0;
+	transition: .4s ease;
+	/* filter: var(--color-filter); */
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+
+a {
+	text-decoration: none;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+li {
+	list-style: none;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+.flex-center {
+	display: flex;
+	justify-content: center;
+	align-items: center;
 }
 
-.App-link {
-  color: #61dafb;
+.section {
+	position: relative;
+	max-width: 1150px;
+	min-height: auto;
+	margin-left: auto;
+	margin-right: auto;
+	padding: 6rem 2rem 2rem;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.sub-section {
+	position: relative;
+	max-width: 1150px;
+	margin-left: auto;
+	margin-right: auto;
+	padding: 6rem 0;
+}
+
+.btn {
+	background-color: var(--white-95);
+	color: var(--black);
+	font-size: var(--small);
+	display: inline-block;
+	margin-top: 25px;
+	padding: 20px 30px;
+	letter-spacing: 1px;
+	border-radius: 10px;
+	font-weight: 600;
+	display: flex;
+	width: 210px;
+	justify-content: center;
+	align-items: center;
+}
+
+.btn:hover {
+	background-color: var(--white);
+}
+
+.container {
+	position: relative;
+	flex-direction: column;
+}
+
+.section-title-01{
+  font-size: var(--extra-large);
+  font-weight: 900;
+  margin-bottom: 2rem;
+  background: linear-gradient(to top, transparent 0%, var(--first-color) 70%);
+	color: var(--white);
+	opacity: .15;
+}
+
+.section-title-02{
+  font-size: var(--large);
+  font-weight: 900;
+  transform: translatey(-80px);
+}
+
+.section-title-02::after{
+	content: "";
+	position: absolute;
+	width: 70px;
+	height: 5px;
+	right: 0;
+	bottom: 0;
+	background: var(--white);
+}
+
+.hidden {
+	visibility: hidden;
+	opacity: 0;
+}
+
+.show {
+	visibility: visible;
+	opacity: 1;
+}
+
+.scroll-icon{
+	font-size: 1.7rem;
+	color: var(--black);
+}
+.scroll-to-top:hover{
+	transform: scale(1.09s);
+	transition: .4s;
+}
+
+::-webkit-scrollbar{
+  width: 6px;
+  background: var(--scroll-bar-color);
+}
+::-webkit-scrollbar-thumb{
+  background: var(--scroll-thumb-color);
+  border-radius: 2em;
+}
+
+::-webkit-scrollbar-thumb:hover{
+	background: var(--scroll-thumb-hover-color);
+}
+
+::placeholder{
+	color: var(--white-95);
+}
+
+@media screen and (max-width: 1070px) {
+	.content{
+		padding: 0 1rem;
+	}
+}
+
+@media screen and (max-width: 760px) {
+	.App{
+		padding: 5rem 0 0 0;
+	}
+
+	.section-title-01{
+		font-size: 3.4rem;
+	}
+
+	.section-title-02{
+		font-size: 3rem;
+		transform: translateY(-70px);
+	}
+
+	.section{
+		padding: 2rem;
+		min-height: auto;
+	}
 }

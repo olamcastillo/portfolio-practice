@@ -1,0 +1,139 @@
+.home {
+	position: relative;
+	max-width: 1250px;
+	min-height: 100vh;
+	margin-left: auto;
+	margin-right: auto;
+	padding: 4rem 2rem;
+	flex-direction: column;
+}
+
+.home .home-container {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	width: 100%;
+}
+
+.home-container .media-icons {
+	display: flex;
+	flex-direction: column;
+	margin-right: 40px;
+}
+
+.home-container .media-icons a {
+	color: var(--white-95);
+	font-size: 1.5rem;
+	margin: 10px 0;
+}
+
+.home-container .media-icons a:hover {
+	color: var(--white);
+}
+
+.home-container .info h2 {
+	font-size: var(--extra-large);
+	font-weight: 950;
+	line-height: 70px;
+}
+
+.home-container .info h3 {
+	color: var(--white);
+	font-weight: 600;
+	line-height: 50px;
+	font-size: var(--normal);
+	margin-top: 30px;
+
+}
+
+.home-container .info p {
+	color: var(--white);
+	font-size: var(--small);
+	max-width: 350px;
+}
+
+.btn .icon {
+	margin-left: 5px;
+	font-size: var(--small);
+}
+
+.home-container .home-img {
+	position: relative;
+}
+
+.home-container .home-img img {
+	width: 90%;
+	transform: translate(0, 0);
+}
+
+.home .scroll-down {
+	color: var(--white);
+	font-size: var(--small);
+	position: absolute;
+	bottom: 60px;
+}
+
+.home .scroll-down .icon {
+	margin-left: 5px;
+	animation: arrow-down ease 2s infinite;
+}
+
+@keyframes arrow-down {
+	0% {
+		transform: translateY(0);
+	}
+	30% {
+		transform: translateY(.8rem);
+	}
+}
+
+@media screen and (max-width: 1070px) {
+	.home .home-container .info {
+		font-size: .85rem;
+	}
+}
+
+@media screen and (max-width: 760px) {
+
+	.home{
+		padding: 2rem;
+	}
+
+	.home .home-container{
+		width: auto;
+		display: grid;
+	}
+
+	.home-container .home-img{
+		position: absolute;
+	}
+
+	.home-container .home-img img{
+		width: 65%;
+		transform: translate(80px, -180px);
+	}
+
+	.home .home-container .info{
+		font-size: .8rem;
+	}
+
+	.media-icons {
+		margin-bottom: 80px;
+	}
+
+	.home-container .info h2{
+		font-size: var(--large);
+	}
+
+	.home-container .info h3{
+		margin-top: 10px;
+	}
+
+	.home .scroll-down{
+		position: relative;
+		margin-top: 100px;
+	}
+}
+	
+
+

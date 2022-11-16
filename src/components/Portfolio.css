@@ -1,0 +1,204 @@
+.portfolio .container .content{
+	width: 100%;
+	}
+	
+.portfolio-list{
+	display: grid;
+	grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+	max-width: 100%;
+	gap: 35px;
+	margin: 0 auto;
+}
+
+.portfolio-list .img-card{
+	position: relative;
+	max-width: 100%;
+	height: 360px;
+	border-radius: 10px;
+	box-shadow: var(--box-shadow) ;
+	overflow: hidden;
+	cursor: pointer;
+}	
+	
+.portfolio-list .img-card .overlay{
+	transition: 1s ease;
+}
+
+.portfolio-list .img-card:hover .overlay{
+	z-index: 777;
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	background: var(--white-07);
+}
+	
+.portfolio-list .img-card .info{
+	z-index: 777;
+	position: absolute;
+	bottom: 0;
+	left: 0;
+	margin: 20px;
+	color: var(--white);
+	transform: translateY(20px) ;
+	opacity: 0;
+	transition: .4s ease;
+}
+
+.portfolio-list .img-card:hover .info{
+	transform: translateY(0px) ;
+	opacity: 1;
+}
+
+.portfolio-list .img-card .info h3{
+	font-size: var(--normal);
+}	
+
+.portfolio-list .img-card .info span{
+	font-size: var(--small);
+}	
+
+.portfolio-list .img-card img{
+	width: 100%;
+	height: 100%;
+	object-fit: cover;
+}
+
+.portfolio-model{
+	z-index: 999999;
+	position: fixed;
+	width: 100%;
+	height: 100vh;
+	top: 0;
+	left: 0;
+	background: var(--black-10) ;
+	backdrop-filter: blur(10px);
+	transform: translateY(0);
+	transition: .6s ease-in-out;
+}
+
+.img-card-container .hidden{
+	transform: translateY(-50px);
+}
+
+.portfolio-model-body{
+	position: relative;
+	background: var(--black) ;
+	max-width: 600px;
+	margin: 20px;
+	padding: 40px;
+	border-radius: 10px;
+	box-shadow: var(--box-shadow) ;
+}
+.portfolio-close-btn{
+	position: absolute;
+	top: 0;
+	right: 0;
+	margin: 20px;
+	cursor: pointer;
+}
+.portfolio-model-body h3 {
+	font-size: var(--medium);
+}
+
+.portfolio-model-body img {
+	width: 100%;
+	margin: 20px 0;
+	border-radius: 10px;
+}
+
+.get-in-touch {
+	margin-top: 70px;
+}
+
+.get-in-touch .container .content {
+	width: 100%;
+}
+
+.get-in-touch .contact-card{
+	position: relative;
+	width: 90%;
+	background: var(--black);
+	box-shadow: var(--box-shadow) ;
+	padding: 50px;
+	border-radius: 10px;
+	column-gap: 5px;
+}
+	
+.contact-card .title{
+	text-transform: uppercase;
+}	
+
+.contact-card .title h4{
+	font-size: var(--normal);
+	font-weight: 100;
+	line-height: 30px;
+
+}	
+	
+.contact-card .title h3{
+	font-size: var(--medium);
+	font-weight: 100;
+	line-height: 90px;
+	
+}	
+
+.contact-card .title h2{
+	line-height: 95px;
+	letter-spacing: 20px;
+	font-size: var(--extra-large);
+	font-weight: 900;
+	background: linear-gradient(to top, transparent 0%, var(--white) 20%);
+	-webkit-background-clip: text;
+	-webkit-text-fill-color: transparent;
+	opacity: .9;
+}
+
+.contact-btn:hover{
+	transform: scale(1.05);
+	transition: .4s ease;
+}
+
+@media screen and (max-width: 1070px) {
+	.get-in-touch .contact-card{
+		display: grid;
+	}
+
+	.contact-card .title{
+		font-size: .8rem;
+	}
+
+	.contact-card .title h2{
+		letter-spacing: normal;	
+		letter-spacing: 5px;
+		line-height: 80px;
+	}
+
+	.contact-card .title h4{
+		line-height: 25px;
+	}	
+		
+	.contact-card .title h3{
+		line-height: 50px;
+		
+	}
+
+	.contact-btn{
+		display: flex;
+		justify-content: center;
+	}
+	
+}
+
+
+@media screen and (max-width: 760px) {
+	.get-in-touch .contact-card{
+		display: flex;
+		flex-direction: column;
+	}
+
+	.contact-card .title h2 {
+		font-size: var(--large);
+		letter-spacing: normal;
+		line-height: 60px;
+	}
+}
